@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>網頁日曆</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: center;
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+		td {
+			position: relative;
+			cursor: pointer;
+		}
+		.event {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: yellow;
+			color: #333;
+			padding: 5px;
+			z-index: 10;
+			display: none;
+		}
+		.edit {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: #333;
+			color: #fff;
+			padding: 2px 5px;
+			cursor: pointer;
+		}
+		.edit:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<h1>網頁日曆</h1>
+	<div>
+		<button id="prev"><i class="fas fa-arrow-left"></i></button>
+		<span id="date"></span>
+		<button id="next"><i class="fas fa-arrow-right"></i></button>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>星期日</th>
+				<th>星期一</th>
+				<th>星期二</th>
+				<th>星期三</th>
+				<th>星期四</th>
+				<th>星期五</th>
+				<th>星期六</th>
+			</tr>
+		</thead>
+		<tbody id="calendar"></tbody>
+	</table>
+
+	<div id="modal" class="event-modal">
+		<div>
+			<label for="event">事件:</label>
+			<input type="text" id="event" name="event">
+		</div>
+		<div>
+			<button id="save">保存</button>
+			<button id="cancel">取消</button>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// 初始化日期
+			var date = moment();
+			var today = moment().format("YYYY-MM-DD");
+
+			// 設置日期顯示
+			function setDate() {
+				$("#date").text(date.format("YYYY年MM月"))}});
+			
