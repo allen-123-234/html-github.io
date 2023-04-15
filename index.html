@@ -1,241 +1,127 @@
-<form onsubmit="return search()" class="search-form">
-        
-    <div class="search-input">
-      <input type="text" id="search-term" name="search-term" class="search-box" placeholder="請輸入歌名">
-      <button type="submit" class="search-button">搜尋</button>
-    </div>
-  </form>
-  <style>
-  .search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>計劃表</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		td {
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+		input {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 5px;
+			font-size: 16px;
+			border: none;
+			background-color: #f5f5f5;
+		}
+	</style>
+	<script>
+		// 將輸入框的內容保存到 localStorage 中
+		function saveInput() {
+			var inputs = document.getElementsByTagName('input');
+			for (var i = 0; i < inputs.length; i++) {
+				localStorage.setItem(inputs[i].id, inputs[i].value);
+			}
+		}
 
-.search-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+		// 從 localStorage 中恢復輸入框的內容
+		function restoreInput() {
+			var inputs = document.getElementsByTagName('input');
+			for (var i = 0; i < inputs.length; i++) {
+				var value = localStorage.getItem(inputs[i].id);
+				if (value) {
+					inputs[i].value = value;
+				}
+			}
+			saveInput();
+		}
 
-.search-box {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  width: 300px;
-  margin-right: 10px;
-}
-
-.search-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: #0069d9;
-}
-
-      
-      </style>
-     
-    
-    
-    
-    
-      
-      <script>
-        function search() {
-          // 取得搜尋關鍵字的值
-          var searchTerm = document.getElementById("search-term").value;
-      
-          // 檢查搜尋關鍵字是否包含 "蘋果"
-          if (searchTerm.includes("台灣的心跳聲")) {
-            // 導航到下一個分頁
-            window.location.href = "scss.html";
-            return false; // 防止表單提交
-          } else {
-            if (searchTerm.includes("wonderful")) {
-        // 導航到下一個分頁
-        window.location.href = "scss - 複製.html";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else {     if (searchTerm.includes("蘋果")) {
-        // 導航到下一個分頁
-        window.location.href = "下個分頁的網址";
-        return false; // 防止表單提交
-      } else { // 顯示錯誤訊息
-      alert("搜尋關鍵字不包含蘋果！");
-            return false; // 防止表單提交
-          }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-        }
-      </script>
-      
- 
-    
-      </div>
-      <br>
-      本站目前有這些歌曲:
-      <br>
-      <h5 style="color:orange;">台灣的心跳聲</h2>
-      
-      <h5 style="color:orange;">wonderful tonight</h2>
-      
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc96SP9DWmqrPs15g8zhwEVncJGjxyHiUGmtig1p-LEkObNQg/viewform?embedded=true" width="250" height="400" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-    </body>
-    </html>
-     
+		window.onload = function() {
+			restoreInput();
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center;">計劃表</h1>
+	<table>
+		<tr>
+			<td><input type="text" id="input1" oninput="saveInput()"></td>
+			<td><input type="text" id="input2" oninput="saveInput()"></td>
+			<td><input type="text" id="input3" oninput="saveInput()"></td>
+			<td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="input6" oninput="saveInput()"></td>
+			<td><input type="text" id="input7" oninput="saveInput()"></td>
+			<td><input type="text" id="input8" oninput="saveInput()"></td>
+			<td><input type="text" id="input9" oninput="saveInput()"></td>
+			<td><input type="text" id="input10" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
+        <tr>
+			<td><input type="text" id="input11" oninput="saveInput()"></td>
+			<td><input type="text" id="input12" oninput="saveInput()"></td>
+			<td><input type="text" id="input13" oninput="saveInput()"></td>
+			<td><input type="text" id="input14" oninput="saveInput()"></td>
+			<td><input type="text" id="input15" oninput="saveInput()"></td>
+            <td><input type="text" id="input4" oninput="saveInput()"></td>
+			<td><input type="text" id="input5" oninput="saveInput()"></td>
+        </tr>
